@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/32594ad293.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Student of BISU Balilihan Campus</p>
+            <h1>Hi!, I'm <span>Rogel J. Garcia</span><br> from Philipines</h1>
+            </div>
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="images/garcia g.png">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Me</h1>
+                            <p>Hi! I am Rogel J. Garcia As an individual, I am a curious and passionate explorer with a genuine enthusiasm for diverse experiences and continuous learning. Fueled by a creative spirit, I find joy in unraveling complex concepts, whether through my academic pursuits or personal projects. With a background in [your field or major], I am dedicated to honing my skills in [specific skills or areas of expertise], eager to contribute to the ever-evolving landscape of [related field]. Beyond my professional aspirations, I value meaningful connections, embracing each opportunity to collaborate and grow alongside others. Guided by a strong sense of integrity and fueled by a desire to make a positive impact, I approach challenges with resilience and an open mind, always seeking to expand my horizons and leave a lasting mark in the realms I explore.
+
+
+
+
+
+                                .</p>
+                       <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                        <p class="tab-links" onclick="opentab('background')">Background</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Designing</span><br>Web development</li>
+                            <li><span>Programming</span><br>Mobile App</li>
+                            <li><span>Graphic Designer</span><br>Adobe Photoshop</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="interests">
+                        <ul>
+                            <li><span>1.</span> Access to the least technology and software.</li>
+                            <li><span>2.</span>Opportunities to learn more skills</li>
+                            <li><span>3.</span>Creating a visually appealing design and ensuring a positive user experience can be both challenging</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="background">
+                        <ul>
+                            <li><span>1.</span>Studying Information Technology to learn about programming languages. </li>
+                            <li><span>2.</span>I spend a lot of time to create my project and assignment. </li>
+                            <li> As a student of Information Technology i do my best to learn about programming. </li>
+                        </ul>
+                       </div>
+                        </div>
+                    </div>
+                </div>
+                <!------------Project---------->
+                <div id="Projects">
+                    <div class="container">
+                        <h1 class="sub-title">My Project</h1>
+                        <div class="Projects-list">
+                            <div>
+                                <h2>Web Design</h2>
+                                <p>Explore this web design exercise.</p>
+                                <a href="#">Learn more</a>
+                            </div>
+                            <div>
+                                <h2>Web Design</h2>
+                                <p>Using JS, HTML, CSS.</p>
+                                <a href="#">Learn more</a>
+                        </div>
+                        <div>
+                            <h2>Web Design</h2>
+                            <p>Creating a website.</p>
+                            <a href="#">Learn more</a>
+                    </div>
+                </div>
+                <!---------------contact------------>
+                <div id="contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="contact-left">
+                                <h1 class="sub-title">Contact</h1>
+                                <p><i class="fa-sharp fa-solid fa-paper-plane"></i> contact rogelgarcia079@gmail.com</p>
+                                <p><i class="fa-solid fa-phone"></i> 09207730531</p>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com/rogel.garcia.1610"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacgt-right">
+                            <form>
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="Email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>copyright @ Rogel, <i class="fa-solid fa-heart"></i> My Portfolio</p>
+                </div>
+            </div>
+            <script>
+
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                
+                function opentab(tabname){
+                    for(tablink of tablinks){
+                        tablink.classList.remove("active-link");
+                    }
+                    for(tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+            </script>
+
+            <script>
+
+                var sidemenu = document.getElementById("sidemenu");
+                function openmenu(){
+                    sidemenu.style.right = "0";
+                }
+                function closemenu(){
+                    sidemenu.style.right = "-200px";
+                }
+            </script>
+</div>
+</body>
+</html>
